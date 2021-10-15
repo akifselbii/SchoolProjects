@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+		 h1 { background-color: #038BBF;font-family: Arial, sans-serif;font-size: 50px;color: #000;}
+		 h3 { color: #000;}
+		 button {width:379px;height:40px;float:left;background-color: #038BBF;;margin:0px;margin-bottom:0px;font-size: 16px;}
+		 body {
+		      background-image: url('https://cdn.hipwallpaper.com/i/91/57/bJqCld.jpg');
+			  background-repeat: no-repeat;
+			   background-attachment: fixed;
+			  background-size: cover;
+			  box-sizing: border-box;
+			  font-family: Lato, Arial;
+			  text-align: center;
+			  color: #eee;
+			  background-color: #FFFFFF;
+
+			}
+
+		</style>
+				<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+   </head>
+   <body>
+		<h1>
+         <center><p>Yönetici Sayfası</p></center>
+		</h1>
+		<a href="{{ url_for('ogrenci_kayit') }}" >
+			
+				<button>Öğrenci Bilgileri</button>
+			
+		</a>
+		<a href="{{ url_for('ogretmen_kayit') }}" >
+			
+			<button>Öğretmen Bilgileri</button>
+			
+		</a>
+		<a href="{{ url_for('ders_kayit') }}" >
+			
+			<button>Ders Bilgileri</button>
+			
+		</a>
+		<a href="{{ url_for('kitap_kayit') }}" >
+			
+			<button>Kitap Bilgileri</button>
+			
+		</a>
+		<hr/>
+		<br>
+		
+      <h3><center><p>Ders Kayıt</p></center></h3>
+      <hr/>
+      <center>
+      
+      <form action = "{{ request.path }}" method = "post">
+         <br>
+         <input type = "text" name = "name" placeholder = "İsim" /><br>
+         <br>
+		 <input type = "text" name = "no" placeholder = "Ders_Kodu" /><br>
+         <br>
+		 <input type = "text" name = "akts" placeholder = "Akts" /><br>
+         <br>
+		 <input type = "text" name = "kredi" placeholder = "Kredi" /><br>
+         <br>
+		 {% for book in Book %}
+         <input name="{{book.name}}"  type="checkbox" value="" id="flexCheckDefault">
+         <label for="flexCheckDefault">
+            {{book.name}}
+         </label>
+		 <br>
+        {% endfor %}
+		 <input type = "submit" class="btn btn-primary" value = "Kaydet" />
+      </form>
+	  </center>
+	  </h3>
+	  <hr/>
+	  
+	   <center>
+	   
+	   <br>
+     
+      <h3>Dersler</h3>
+      
+      <table>
+         <thead>
+            <tr bgcolor= "#038BBF">
+               <th style="color:#000;font-size:120%;"><center>Ders</center></th>
+               <th style="color:#000;font-size:120%;"><center>Ders_Kodu</center></th>
+			   <th style="color:#000;font-size:120%;"><center>Akts</center></th>
+			   <th style="color:#000;font-size:120%;"><center>Kredi</center></th>
+			   <th style="color:#000;font-size:120%;"><center>Kitap</center></th>
+			   
+            </tr>
+         </thead>
+         
+         <tbody>
+            {% for lecture in Lecture %}
+               <tr>
+                  <td width="200"><center><font face="tahoma" size="5" color="black">{{ lecture.name }}</font></center></td>
+                  <td width="200"><center><font face="tahoma" size="5" color="black">{{ lecture.no }}</font></center></td>
+				  <td width="200"><center><font face="tahoma" size="5" color="black">{{ lecture.akts }}</font></center></td>
+				  <td width="200"><center><font face="tahoma" size="5" color="black">{{ lecture.kredi }}</font></center></td>
+				  <td width="200"><center><font face="tahoma" size="5" color="black">{{ lecture.book.name }}</font></center></td>
+				  <td>
+                     <input type="hidden"  name="cls" value="Lecture">
+					 <a href="/edit/Lecture/{{lecture.id}}" class="btn btn-danger btn-xs">Düzenle
+					 </a>
+                     <a href="/delete/Lecture/{{lecture.id}}" class="btn btn-danger btn-xs">Sil</a>
+                  </td>
+               </tr>
+            {% endfor %}
+         </tbody>
+		 
+      </table>
+      </center>
+	  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+   </body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+		 h3 { color: #000;}
+		 h1 { background-color: #038BBF;font-family: Arial, sans-serif;font-size: 50px;color: #000;}
+		 button {width:379px;height:40px;float:left;background-color: #038BBF;;margin:0px;margin-bottom:0px;font-size: 16px;}
+		 body {
+			background-image: url('https://www.teahub.io/photos/full/50-507804_1920x1080-get-the-latest-background-faded-stains-faded.jpg');
+			  background-repeat: no-repeat;
+			   background-attachment: fixed;
+			  background-size: cover;
+			  box-sizing: border-box;
+			  font-family: Lato, Arial;
+			  text-align: center;
+			  color: #eee;
+			  background-color: #FFFFFF;
+
+			}
+	
+		</style>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+   </head>
+   <body>
+		<h1>
+         <center><p>Yönetici Sayfası</p></center>
+		</h1>
+		
+		<a href="{{ url_for('ogrenci_kayit') }}" >
+			
+				<button>Öğrenci Bilgileri</button>
+			
+		</a>
+		<a href="{{ url_for('ogretmen_kayit') }}" >
+			
+			<button>Öğretmen Bilgileri</button>
+			
+		</a>
+		<a href="{{ url_for('ders_kayit') }}" >
+			
+			<button>Ders Bilgileri</button>
+			
+		</a>
+		<a href="{{ url_for('kitap_kayit') }}" >
+			
+			<button>Kitap Bilgileri</button>
+			
+		</a>
+		<hr/>
+		<br>
+		
+      <h3><center><p>Ders Kayıt</p></center></h3>
+      <hr/>
+      <center>
+      
+      <form action = "{{ request.path }}" method = "post">
+	           <br>
+		 <input type = "text" name = "no" placeholder = "{{lecture.no}}" value="{{lecture.no}}"/><br>
+         <br>
+         <input type = "text" name = "name" placeholder = "{{lecture.name}}" value="{{lecture.name}}"/><br>
+         <br>
+         <input type = "text" name = "akts" placeholder = "{{lecture.akts}}" value="{{lecture.akts}}"/><br>
+         <br>
+         <input type = "text" name = "kredi" placeholder = "{{lecture.kredi}}" value="{{lecture.kredi}}"/><br>
+         <br>
+		{% for book in Book %}
+         <input name="{{book.name}}"  type="checkbox" value="" id="flexCheckDefault">
+         <label for="flexCheckDefault">
+            {{book.name}}
+		</label>
+		 <br>
+		 
+        {% endfor %}
+         <input type = "submit" class="btn btn-primary" value = "Kaydet" />
+      </form>
+	  </center>
+	  </h3>
+	  <hr/>
+	  
+	   <center>
+	   
+	  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+   </body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<!--Popup Kodu-->
+		
+		<style type="text/css">
+		 h3 { color: #000;}
+		 h1 { background-color: #038BBF;font-family: Arial, sans-serif;font-size: 50px;color: #000;}
+		 button {width:379px;height:40px;float:left;background-color: #038BBF;;margin:0px;margin-bottom:0px;font-size: 16px;}
+		 body {
+			background-image: url('https://www.teahub.io/photos/full/50-507804_1920x1080-get-the-latest-background-faded-stains-faded.jpg');
+			  background-repeat: no-repeat;
+			   background-attachment: fixed;
+			  background-size: cover;
+			  box-sizing: border-box;
+			  font-family: Lato, Arial;
+			  text-align: center;
+			  color: #eee;
+			  background-color: #FFFFFF;
+
+			}
+	
+		</style>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+		
+   </head>
+   <body>
+		<h1>
+         <center><p>Yönetici Sayfası</p></center>
+		</h1>
+		
+		<a href="{{ url_for('ogrenci_kayit') }}" >
+			
+				<button>Öğrenci Bilgileri</button>
+			
+		</a>
+		<a href="{{ url_for('ogretmen_kayit') }}" >
+			
+			<button>Öğretmen Bilgileri</button>
+			
+		</a>
+		<a href="{{ url_for('ders_kayit') }}" >
+			
+			<button>Ders Bilgileri</button>
+			
+		</a>
+		<a href="{{ url_for('kitap_kayit') }}" >
+			
+			<button>Kitap Bilgileri</button>
+			
+		</a>
+		<hr/>
+		<br>
+		
+      <h3><center><p>Öğrenci Kayıt</p></center></h3>
+      <hr/>
+      <center>
+      
+      <form action = "{{ request.path }}" method = "post">
+	           <br>
+		 <input type = "text" name = "no" placeholder = "Numara" /><br>
+         <br>
+         <input type = "text" name = "fname" placeholder = "İsim" /><br>
+         <br>
+         <input type = "text" name = "lname" placeholder = "Soyisim" /><br>
+         <br>
+         <input type = "text" name = "grade" placeholder = "Sınıf" /><br>
+         <br>
+         <input type = "text" name = "password" placeholder = "Şifre"/><br>
+		 		 <br>
+		{% for lecture in Lecture %}
+         <input name="{{lecture.name}}"  type="checkbox" value="" id="flexCheckDefault">
+         <label for="flexCheckDefault">
+            {{lecture.name}}
+         </label>
+		 <br>
+        {% endfor %}
+         <input type = "submit" class="btn btn-primary" value = "Kaydet" />
+      </form>
+	  </center>
+	  </h3>
+	  <hr/>
+	  
+	   <center>
+	   
+	   <br>
+     
+      <h3>Öğrenciler</h3>
+      
+      <table>
+         <thead>
+            <tr bgcolor= "#038BBF">
+			   <th style="color:#000;font-size:120%;"><center>Numara</center></th>
+               <th style="color:#000;font-size:120%;"><center>İsim</center></th>
+               <th style="color:#000;font-size:120%;"><center>Soyisim</center></th>
+               <th style="color:#000;font-size:120%;"><center>Sınıf</center></th>
+               <th style="color:#000;font-size:120%;"><center>Şifre</center></th>
+			   <th style="color:#000;font-size:120%;"><center>Dersler</center></th>
+			   
+            </tr>
+         </thead>
+         
+         <tbody>
+            {% for student in Students %}
+               <tr>
+				  <td width="200"><center><font face="tahoma" size="5" color="black">{{ student.no }}</font></center></td>
+                  <td width="200"><center><font face="tahoma" size="5" color="black">{{ student.fname }}</font></center></td>
+                  <td width="200"><center><font face="tahoma" size="5" color="black">{{ student.lname }}</font></center></td>
+                  <td width="200"><center><font face="tahoma" size="5" color="black">{{ student.grade }}</font></center></td>
+                  <td width="200"><center><font face="tahoma" size="5" color="black">{{ student.password }}</font></center></td>
+				  <td>
+                     {% for lecture in student.lectures.all()%}
+                     <ul>
+                        <li>
+                           {{lecture.name}}
+                        </li>
+                     </ul>
+                     {% endfor %}
+                  </td>
+				  <td>
+                     <input type="hidden"  name="cls" value="Student">
+					 <a href="/edit/Students/{{student.id}}" class="btn btn-danger btn-xs">Düzenle
+					 </a>
+                     <a href="/delete/Students/{{student.id}}" class="btn btn-danger btn-xs">Sil</a>
+                  </td>
+			   </tr>
+				  
+            {% endfor %}
+         </tbody>
+      </table>
+      </center>
+	  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+   </body>
+</html>

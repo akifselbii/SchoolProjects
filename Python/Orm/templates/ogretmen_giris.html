@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+		 h3 { color: #000;}
+		 h1 { background-color: #038BBF;font-family: Arial, sans-serif;font-size: 50px;color: #000;}
+		 button {width:379px;height:40px;float:left;background-color: #038BBF;;margin:0px;margin-bottom:0px;font-size: 16px;}
+		 body {
+			background-image: url('https://www.teahub.io/photos/full/50-507804_1920x1080-get-the-latest-background-faded-stains-faded.jpg');
+			  background-repeat: no-repeat;
+			   background-attachment: fixed;
+			  background-size: cover;
+			  box-sizing: border-box;
+			  font-family: Lato, Arial;
+			  text-align: center;
+			  color: #eee;
+			  background-color: #FFFFFF;
+
+			}
+		</style>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+   </head>
+   <body>
+		<h1>
+         <center><p>Öğretmen</p></center>
+		</h1>
+		
+		
+     
+      <h3>Dersler</h3>
+      <center>
+      <table>
+         <thead>
+            <tr bgcolor= "#038BBF">
+			   <th style="color:#000;font-size:120%;">Ders_kodu</th>
+			   <th style="color:#000;font-size:120%;">Ders Adı</th>
+            </tr>
+         </thead>
+         
+         <tbody>
+            {% for lecture in Lecture %}
+               <tr>
+				  <td width="200">{{ lecture.no }}</td>
+                  <td width="200">{{ lecture.name }}</td>
+				  
+               </tr>
+            {% endfor %}
+         </tbody>
+		 
+      </table>
+      </center>
+	  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+   </body>
+</html>

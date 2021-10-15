@@ -1,0 +1,102 @@
+BADE: Aşk, kutsal sevgi
+BAHA: Değerli, kıymeti çok
+BAHAR: Yazla kış arasında olan mevsim. Güzellik,gençlik çağı.
+BAHARGÜL:Bahar gülü.
+BALA: Yavru çocuk
+BALCA: Bal gibi, bala benzer
+BALIN: Yar, sevgili
+BALKIN: Pırıldayan, parlak
+BALKIZ: Bal kadar tatlı kız
+BANU: Prenses; Hanımefendi. Yeni evli gelin.
+BANUHAN:Hatun hükümdar.
+BAŞAK: Ekinlerin tanelerini taşıyan baş kısmı
+BEDİZ: Resim, tasvir, süs, bezek
+BEGÜM: Hanım; Kadın hükümdar.
+BEHİN: İyinin iyisi
+BEHİYE:Güzel.
+BELDE: Memleket, şehir, kasaba
+BELEMİR: Peygamber çiçeği olarak biliniyor. Açtığı kokusunun dağılmasıyla anlaşılan gizli çiçek anlamında
+BELEN: Bel, geçit; İki dağ arasından geçen yol
+BELFÜ: Kar tanesi
+BELGİ: İşaret
+BELGİN: Kesin ve eksiksiz belirlenen
+BELGÜN:Aydınlık gün.
+BELİN:Korku ile şaşkın şakın bakmak.
+BELİZ: İşaret, iz; alamet
+BELKIS:Efsaneye göre Hazreti Süleyman aleyhisselam zamanındaki Saba melikesinin adı.
+BELMA:Uysal,sakin.
+BELUR:Billur,billurdan olan.
+BENAN: Parmak uçları
+BENAY: Ben ayım, ay gibiyim
+BENEK: Namuslu kadın
+BENGİ,BENGÜ: Ölümsüz, sonsuz
+BENGİSU: Ölümsüzlük suyu
+BENGÜL:Gül gibi.
+BENİZ: Yüz
+BENNUR:Işık saçan.
+BERGÜZAR: Anılmak için verilen şey, andaç
+BERİA: Olgunluk ve güzelliğiyle üstün olan sevgili
+BERİL: Zümrüt
+BERİN,BERRİN: En yüksek, en ulu anlamında
+BERKE: Zerdali, kayısı. Kamçı, değnek
+BERNA: Bağlı, bağlanmış; Genç, körpe, delikanlı
+BERRAK: Duru
+BERRAN: Keskin, kesici
+BESİME:Sevimli,güler yüzlü.
+BESİSU: Bitkilerin damarlarında dolaşan besleyici su
+BESTE: Bir müzik parçasını oluşturan ezgilerin tümü
+BESTEGÜL:Gül kadar güzel ve duygulu.
+BESTENİGAR: Türk müziğinde bileşik bir makam
+BETÜL,BETİL: Erkeklerden çekinen namuslu kadın, Hazreti Meryem ve Hazreti Fatma`nın diğer isimleri
+BEYZA: Çok beyaz, lekesiz
+BİGE:Evlenmemiş,çocuk doğurmamış olan. Sultan.
+BİHTER: Daha iyi, en iyi
+BİKE: Evlenmemiş, çocuğu olmamış kadın
+BİLCAN:Bilgili dost.
+BİLGE: Çok bilgili ve bilgisini yararlı kullanan kişi
+BİLHAN: Çok bilgili
+BİLLUR: Pek duru, pürüzsüz
+BİLNAZ:Çok naz eden.
+BİLNUR:Bilge kişi.
+BİNAY:Öylesine güzel ki bin ay eder.
+BİNGÜL: Gülü bol; Gül bahçesi
+BİNNAZ: Çok nazlı,cilveli,kaprisli.
+BİNNUR:Çok ışıklı, ışığı gür
+BİRAY: Ay gibi tek, eşsiz
+BİRBET: Yüzü benzersiz
+BİRGEN: Yalnız, yalnızlığa alışkın
+BİRİCİK: Bir tane, tek, emsalsiz
+BİRGÜL: Tek ve güzel bir gül.
+BİRSEN: Yalnız sen
+BİRSU:"Bir içim su" denilebilecek kadar güzel olan.
+BUKET: Çiçek demeti
+BURCU: Güzel koku, ıtır
+BURÇAK: Bir bitki
+BURÇİN: Dişi geyik
+BUSE: Öpücük
+BÜGE:Bent,su benti.
+BÜŞRA: Müjde, sevinçli haber
+BANU : Ev kadını.
+BEGÜM : Saygı değer kadın, hanım.
+BEHİYE : Güzel, alımlı kadın.
+BENAN : Parmakla gösterilecek kadar güzel.
+BENGİ : Sonsuz, tiryaki.
+BERAT : Yapılan hayırlı bir iş yüzünden affetmek üzere verilen karşılık.
+BEREN : Kuzu.
+BERİN : Manen çok yüksek, yüce yaradılışlı.
+BERİRE :İhsan sahibi, sadık.
+BERNA : Genç, cesur, civan.
+BESAMET : Güler yüzlü.
+BETİGÜL : Gül gibi kokan mektup.
+BETÜL : Erkeklerden çekinen, ibadete düşkün, namuslu ve çok temiz kadın. Hazret-i Fâtıma ve Hazret-i Meryem`in ünvanı.
+BEYHATUN : Hakanın hanımı.
+BEYLEM : Çiçek demedi, buket, sunuş.
+BEYZA : Çok beyaz, çok temiz, parlak.
+BİLGE : Bilgisiyle davranışları birbirine uyan.
+BİLGEHATUN : Derin bilgi sahibi kadın.
+BİNNAZ : Çok nazlı.
+BİRGÜL : Tek ve benzersiz gül.
+BUKET : Demet, çiçek demedi.
+BURÇ : Taze dal, filiz.
+BURÇİN : Dişi geyik.
+BURCU : Güzel kokan.
